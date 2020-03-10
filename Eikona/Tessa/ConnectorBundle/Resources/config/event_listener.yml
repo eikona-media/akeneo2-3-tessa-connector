@@ -1,0 +1,32 @@
+services:
+    eikona.tessa.listener.product.post_save:
+        class: Eikona\Tessa\ConnectorBundle\EventListener\ProductModificationListener
+        arguments:
+            - '@eikona.tessa'
+        tags:
+            - { name: kernel.event_listener, event: akeneo.storage.post_save, method: onPostSave }
+    eikona.tessa.listener.category.post_save:
+        class: Eikona\Tessa\ConnectorBundle\EventListener\CategoryModificationListener
+        arguments:
+            - '@eikona.tessa'
+        tags:
+            - { name: kernel.event_listener, event: akeneo.storage.post_save, method: onPostSave }
+    eikona.tessa.listener.channel.post_save:
+        class: Eikona\Tessa\ConnectorBundle\EventListener\ChannelModificationListener
+        arguments:
+            - '@eikona.tessa'
+        tags:
+            - { name: kernel.event_listener, event: akeneo.storage.post_save, method: onPostSave }
+    eikona.tessa.listener.deletion.post_save:
+        class: Eikona\Tessa\ConnectorBundle\EventListener\DeletedEntityListener
+        arguments:
+            - '@eikona.tessa'
+        tags:
+            - { name: kernel.event_listener, event: akeneo.storage.post_remove, method: onPostRemove }
+
+    eikona.tessa.listener.mass_remove.product:
+        class: Eikona\Tessa\ConnectorBundle\EventListener\DeletedEntityListener
+        arguments:
+            - '@eikona.tessa'
+        tags:
+            - { name: kernel.event_listener, event: pim_catalog.post_mass_remove.product, method: onMassRemoveProducts }

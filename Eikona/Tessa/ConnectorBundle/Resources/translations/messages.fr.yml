@@ -1,0 +1,13 @@
+eikona_catalog_tessa: 'TESSA CONNECT'
+
+tessa:
+  error:
+    not available: |
+      Excusez-nous, il est malheureusement impossible d’atteindre TESSA !
+
+      Merci de réessayer ultérieurement.
+info:
+  attribute:
+    max count files:
+      label: Nombre maximal d’actifs
+      help: Sélectionnez le nombre maximal d’actifs pouvant être affectés à cet actif

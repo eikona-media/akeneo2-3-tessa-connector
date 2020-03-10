@@ -1,0 +1,12 @@
+eikona_catalog_tessa: 'TESSA CONNECT'
+tessa:
+  error:
+    not available: |
+      Sorry, but your TESSA cannot be reached!
+
+      Please try again later.
+info:
+  attribute:
+    max count files:
+      label: Maximum number of assets
+      help: Select the maximum number of assets that can be assigned to this attribute

@@ -1,0 +1,4 @@
+extensions:
+    eikon-tessa-asset-selection-iframe:
+        module: eikona/tessa/connector/mam-asset-selection/iframe
+        targetZone: self

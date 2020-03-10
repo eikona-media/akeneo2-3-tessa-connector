@@ -1,0 +1,40 @@
+pim_enrich.entity.attribute.type.eikona_catalog_tessa: 'TESSA CONNECT'
+eikona_catalog_tessa: 'TESSA CONNECT'
+tessa:
+  asset management:
+    title: TESSA Asset Management
+    confirm: Save
+    cancel: Cancel
+    asset: Asset
+    assets: Assets
+    choose: Manage assets
+    choosen: selected
+    mark_removable: Mark as removable
+    unmark_removable: Unmark as removable
+    marked_removable: Marked as removable
+  configuration:
+    base_url:
+      label: API URL
+      description: Url to the TESSA api
+    ui_url:
+      label: TESSA URL
+      description: Url to the TESSA application
+    username:
+      label: User name
+      description: TESSA username for the api access
+    apikey:
+      label: API Key
+      description: TESSA api key for the api access
+    systemidentifier:
+      label: TESSA System Identifier
+      description: TESSA system identifier
+    tab:
+      label: TESSA
+    link:
+      label: EIKONA Akeneo TESSA Connector
+  attribute:
+      max_assets:
+          label: Max assets
+  datagrid:
+    cell:
+      assets: "{{ count }} asset|{{ count }} assets"

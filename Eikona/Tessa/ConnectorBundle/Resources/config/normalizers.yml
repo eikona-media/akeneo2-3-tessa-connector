@@ -1,0 +1,2 @@
+parameters:
+  pim_enrich.normalizer.file.class: Eikona\Tessa\ConnectorBundle\Extension\Normalizer\Standard\FileNormalizer

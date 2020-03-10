@@ -1,0 +1,8 @@
+config:
+    paths:
+        eikona/tessa/connector/reference-data/form/field:            eikonatessareferencedata/js/reference-data/form/field
+#        eikona/tessa/connector/reference-data/form/field/create:     eikonatessareferencedata/js/reference-data/form/create
+        eikona/tessa/connector/mam-asset-selection/iframe:           eikonatessareferencedata/js/mam-asset-selection/iframe-modal
+        eikona/tessa/connector/reference-data/templates/asset-selection/form:      eikonatessareferencedata/templates/mam-asset-selection/iframe-modal.html
+
+

@@ -1,0 +1,12 @@
+eikona_tessa_media_preview:
+    path: /show/{assetId}
+    defaults: { _controller: EikonaTessaConnectorBundle:MediaFile:preview }
+    methods: [GET]
+eikona_tessa_media_detail:
+    path: /detail/{assetId}
+    defaults: { _controller: EikonaTessaConnectorBundle:MediaFile:detail }
+    methods: [GET]
+eikona_tessa_media_select:
+    path: /select/{data}
+    defaults: { _controller: EikonaTessaConnectorBundle:MediaFile:select }
+    methods: [GET]

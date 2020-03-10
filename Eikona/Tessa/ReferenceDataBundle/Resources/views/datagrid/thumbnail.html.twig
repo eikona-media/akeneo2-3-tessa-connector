@@ -1,0 +1,12 @@
+{% set data = value|split(':') %}
+{% if data|length == 2 %}
+    {% set collectionId = data[0] %}
+    {% set assets = data[1]|split(',') %}
+    <div class="product_value_tessa">
+        {% for assetId in assets %}
+            <div class="image">
+                <img src="{{ path('eikona_tessa_media_preview', {'assetId': assetId}) }}">
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

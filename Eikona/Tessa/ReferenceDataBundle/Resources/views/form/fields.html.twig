@@ -1,0 +1,16 @@
+{% block eikona_form_tessa_widget %}
+    {% spaceless %}
+        <div id="{{ id }}">
+            {{ form_widget(form) }}
+        </div>
+        <script type="text/javascript">
+            require(['jquery', 'eikona/tessa/connector/reference-data/form/field/create'], function ($, TessaFieldCreate) {
+                'use strict';
+                TessaFieldCreate.createNewTessaFormField($('#{{ id }}'), '{{ value }}', {
+                    maximumCount: {{ form.vars.maximumCount }},
+                    allowedExtensions: '{{ form.vars.allowedExtensions|join(',') }}'
+                });
+            });
+        </script>
+    {% endspaceless %}
+{% endblock %}

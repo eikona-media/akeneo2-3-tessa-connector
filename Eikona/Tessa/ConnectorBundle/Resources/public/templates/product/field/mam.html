@@ -1,0 +1,56 @@
+<div class="AknAssetCollectionField">
+
+    <div class="asset-collection-picker">
+        <div class="EikonAssetGallery <%= (typeof isReadOnly !== 'undefined' && isReadOnly) ? 'readonly' : '' %>">
+            <div class="AknAssetCollectionField-header">
+                <span class="AknButtonList-item AknButton AknButton--apply AknButton--withIcon <% if (typeof isReadOnly !== 'undefined' && isReadOnly) { %>AknButton--disabled<% } %> add-asset icons-holder-text">
+                    <%= _.__('tessa.asset management.choose') %>
+                </span>
+            </div>
+            <input name="asset-sids" type="text" placeholder="sids" value="<%= value.data %>">
+            <ul class="EikonAssetGallery-list <%= assets.length == 0 ? 'empty' : '' %>">
+                <% _.each(assets, function(item){ %>
+                <li class="EikonAssetGallery-listitem <% if (item.markedToRemove) { %>EikonAssetGallery-listitem--markedToRemove<% } %>">
+                    <!--suppress CssUnknownTarget -->
+                    <a target="_blank" href="<%- item.linkUrl %>">
+                        <div class="EikonAssetGallery-thumbnail"
+                             style="background-image: url('<%- item.url %>')">
+                        </div>
+                    </a>
+
+                    <% if (typeof isReadOnly === 'undefined' || !isReadOnly) { %>
+                    <div class="EikonAssetGallery-removeArea">
+                        <% if (item.markedToRemove) { %>
+                        <span class="AknIconButton AknIconButton--grey js-remove-asset" data-asset-id="<%= item.id %>"
+                              title="<%= _.__('tessa.asset management.unmark_removable') %>">
+                            <i class="icon icon-repeat icon-flip-horizontal"></i>
+                        </span>
+                        <% } else { %>
+                        <span class="AknIconButton AknIconButton--grey js-remove-asset" data-asset-id="<%= item.id %>"
+                              title="<%= _.__('tessa.asset management.mark_removable') %>">
+                            <i class="icon icon-trash"></i>
+                        </span>
+                        <% } %>
+                        <% if (item.markedToRemove) { %>
+                        <div class="EikonAssetGallery-removeText">
+                            <%= _.__('tessa.asset management.marked_removable') %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <% } %>
+                </li>
+                <% }); %>
+            </ul>
+            <div class="placeholder">
+                <img src="/bundles/pimui/images/upload.png" alt="upload icon">
+            </div>
+            <div class="clearfix"></div>
+            <footer>
+                <%= assets.length %> <%= assets.length == 1 ?
+                _.__('tessa.asset management.asset') :
+                _.__('tessa.asset management.assets') %>
+                <%= _.__('tessa.asset management.choosen') %>
+            </footer>
+        </div>
+    </div>
+</div>

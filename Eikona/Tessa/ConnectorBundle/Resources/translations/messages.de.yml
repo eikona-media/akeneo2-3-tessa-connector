@@ -1,0 +1,13 @@
+eikona_catalog_tessa: 'TESSA CONNECT'
+
+tessa:
+  error:
+    not available: |
+      Entschuldigung, leider kann Ihr TESSA nicht erreicht werden!
+
+      Bitte versuchen Sie es später noch einmal.
+info:
+  attribute:
+    max count files:
+      label: Maximale Anzahl Assets
+      help: Wähle, wieviele Assets dieses Attribut maximal zugewiesen haben kann
